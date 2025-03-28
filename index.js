@@ -45,13 +45,12 @@
 // }
 // console.log(atLeastOne(1, 5, 3));
 
-
 //ete drakan en true
 // function checkIfPositive(...arr){
 //     for (let i = 0; i < arr.length; i++) {
 //         if(arr[i]<0){
 //             return false
-//         }        
+//         }
 //     }
 //     return true
 // }
@@ -68,7 +67,6 @@
 // }
 // console.log(addUp([3,3],6));//wrong right one is on leet
 
-
 //
 // function plusOne(digits) {
 //     let toNum = BigInt(digits.join(""))+BigInt(1)
@@ -84,9 +82,23 @@
 // }
 // console.log(lengthOfLastWord("   fly me   to   the moon  "));
 
-
-
 //medium problem of substrings
-function longestSubstringWithoutDublicate(params) {
-    
+function longestSubstringWithoutDublicate(s) {
+  let max = [];
+  let maxLength = [];
+  for (let i = 0; i < s.length; i++) {
+    console.log(max.includes(s[i]));
+    if (!max.includes(s[i])) {
+      max.push(s[i]);
+      maxLength.push(max.length);
+    } else {
+      while (max.includes(s[i])) {
+        max.shift();
+      }
+      max.push(s[i]);
+    }
+  }
+  console.log(max);
+  return maxLength.length > 0 ? Math.max(...maxLength) : 0;
 }
+console.log(longestSubstringWithoutDublicate("aab"));
