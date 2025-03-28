@@ -104,14 +104,23 @@
 // console.log(longestSubstringWithoutDublicate("aab"));
 
 //single number
-function singleNumber(num) {
-    let res = 0
-    for (let i = 0; i < num.length; i++) {
-        res ^=num[i]
-    }
-    return res
-}
-console.log(singleNumber([2,2,1]));
+// function singleNumber(num) {
+//     let res = 0
+//     for (let i = 0; i < num.length; i++) {
+//         res ^=num[i]
+//     }
+//     return res
+// }
+// console.log(singleNumber([2,2,1]));
 // let arr= [2,2,1]
 // let s = arr.shift(arr[0])
 // console.log(s);
+
+//
+function multiply(num1,num2) {
+    let first = BigInt(num1)
+    let second = BigInt(num2)
+    let mul = first*second
+    return mul+""
+}
+console.log(multiply("123456789","987654321"));
