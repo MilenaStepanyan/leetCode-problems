@@ -83,22 +83,35 @@
 // console.log(lengthOfLastWord("   fly me   to   the moon  "));
 
 //medium problem of substrings
-function longestSubstringWithoutDublicate(s) {
-  let max = [];
-  let maxLength = [];
-  for (let i = 0; i < s.length; i++) {
-    console.log(max.includes(s[i]));
-    if (!max.includes(s[i])) {
-      max.push(s[i]);
-      maxLength.push(max.length);
-    } else {
-      while (max.includes(s[i])) {
-        max.shift();
-      }
-      max.push(s[i]);
+// function longestSubstringWithoutDublicate(s) {
+//   let max = [];
+//   let maxLength = [];
+//   for (let i = 0; i < s.length; i++) {
+//     console.log(max.includes(s[i]));
+//     if (!max.includes(s[i])) {
+//       max.push(s[i]);
+//       maxLength.push(max.length);
+//     } else {
+//       while (max.includes(s[i])) {
+//         max.shift();
+//       }
+//       max.push(s[i]);
+//     }
+//   }
+//   console.log(max);
+//   return maxLength.length > 0 ? Math.max(...maxLength) : 0;
+// }
+// console.log(longestSubstringWithoutDublicate("aab"));
+
+//single number
+function singleNumber(num) {
+    let res = 0
+    for (let i = 0; i < num.length; i++) {
+        res ^=num[i]
     }
-  }
-  console.log(max);
-  return maxLength.length > 0 ? Math.max(...maxLength) : 0;
+    return res
 }
-console.log(longestSubstringWithoutDublicate("aab"));
+console.log(singleNumber([2,2,1]));
+// let arr= [2,2,1]
+// let s = arr.shift(arr[0])
+// console.log(s);
