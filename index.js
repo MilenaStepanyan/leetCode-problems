@@ -117,10 +117,16 @@
 // console.log(s);
 
 //
-function multiply(num1,num2) {
-    let first = BigInt(num1)
-    let second = BigInt(num2)
-    let mul = first*second
-    return mul+""
+// function multiply(num1,num2) {
+//     let first = BigInt(num1)
+//     let second = BigInt(num2)
+//     let mul = first*second
+//     return mul+""
+// }
+// console.log(multiply("123456789","987654321"));
+
+//pow(x,n) medium
+function pow(x,n) {
+return Math.pow(x,n)
 }
-console.log(multiply("123456789","987654321"));
+console.log(pow(2,3));
